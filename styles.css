@@ -172,17 +172,18 @@
     height: 130%;
     background-image: conic-gradient(#ff00bb 0deg, #ff00bb 90deg, transparent 130deg, transparent 188deg, #4530FF 180deg, #4530FF 270deg, transparent 310deg, transparent 360deg);
     transition: transform 2s;
-    animation: shah 5s linear infinite alternate;
+    animation: shah 2s linear infinite alternate;
 
 }
+
 @keyframes shah {
     0% {
         transform: translate(-100%, -100%) rotate(360deg);
         /* transform: rotate(0deg); */
         /* Start the rotation from 0 degrees */
     }
-    
-    
+
+
     100% {
         transform: translate(-100%, -100%) rotate(360deg);
         transform: rotate(360deg);
@@ -196,13 +197,13 @@
 
 .card::after {
     content: "";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 94%;
-  height: 94%;
-  background: url('https://cdn.wallpapersafari.com/4/44/ytIAQN.jpg') no-repeat center center/cover;
-  border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 94%;
+    height: 94%;
+    background: url('https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgAAAA?rs=1&pid=ImgDetMain') no-repeat center center/cover;
+    border-radius: 50%;
 
 
 }
