@@ -4,7 +4,7 @@
     align-items: center;
     background-color: blue;
     flex-direction: row;
-    height: 800px;
+    height: 350px;
     justify-content: space-evenly;
 
 }
@@ -16,7 +16,7 @@
 }
 
 .container {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 300px;
     width: 300px;
     display: flex;
@@ -55,8 +55,8 @@
 
 .animation {
     background-color: rgb(224, 230, 235);
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: 4px solid rgb(183, 141, 86);
     border-radius: 50%;
     cursor: pointer;
@@ -66,8 +66,8 @@
 
 .box2 {
     background-color: rgb(183, 141, 86);
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     animation-name: circles;
     animation-duration: 6s;
@@ -76,32 +76,32 @@
 
 @keyframes circles {
     0% {
-        transform: translate(0,0);
+        transform: translate(0, 0);
         background-color: red;
-        
+
     }
-    
+
     25% {
         transform: translate(300px, 0);
         background-color: rgb(228, 119, 152);
-        
-        
+
+
     }
-    
+
     50% {
         transform: translate(300px, 300px);
         background-color: rgb(13, 0, 255);
-        
+
     }
-    
+
     75% {
         transform: translate(0, 300px);
         background-color: red;
-        
+
     }
-    
+
     100% {
-        
+
         transform: translate(0, 0);
         background-color: rgb(20, 180, 41);
 
@@ -118,15 +118,17 @@
 .dots {
     animation: dotsmovement 0.7s ease infinite alternate;
     font-size: 200px;
-   
+
 }
 
 .dots:nth-child(2) {
     animation-delay: 0.1s;
 }
+
 .dots:nth-child(3) {
     animation-delay: 0.2s;
 }
+
 .dots:nth-child(4) {
     animation-delay: 0.3s;
 }
@@ -142,6 +144,67 @@
     }
 }
 
-.section:hover > div:not(:hover){
+.section:hover>div:not(:hover) {
     opacity: 0.2;
-} 
+}
+
+
+.card {
+    /* position: relative; */
+    width: 200px;
+    /* height: 250px; */
+    height: 200px;
+    border-radius: 50%;
+    background-color: #000;
+    position: relative;
+    box-shadow: 0px 0px 5px 2px #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-280deg);
+    width: 160%;
+    height: 130%;
+    background-image: conic-gradient(#ff00bb 0deg, #ff00bb 90deg, transparent 130deg, transparent 188deg, #4530FF 180deg, #4530FF 270deg, transparent 310deg, transparent 360deg);
+    transition: transform 2s;
+    animation: shah 5s linear infinite alternate;
+
+}
+@keyframes shah {
+    0% {
+        transform: translate(-100%, -100%) rotate(360deg);
+        /* transform: rotate(0deg); */
+        /* Start the rotation from 0 degrees */
+    }
+    
+    
+    100% {
+        transform: translate(-100%, -100%) rotate(360deg);
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees */
+    }
+}
+
+/* .card:hover::before {
+    transform: translate(-50%, -50%) rotate(360deg);
+} */
+
+.card::after {
+    content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 94%;
+  height: 94%;
+  background: url('https://cdn.wallpapersafari.com/4/44/ytIAQN.jpg') no-repeat center center/cover;
+  border-radius: 50%;
+
+
+}
+
+/* no-repeat  center center/cover */
